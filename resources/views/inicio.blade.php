@@ -23,16 +23,16 @@ $dnsserver=$tematm["dnsserver"];
                   <div class="col-md-7">
                      <div class="card card_not">                      
                      
-                      {{-- <img src="{{json_decode($publicacion[0]->con_image1)->{'tumb720x482'} }}" class="card-img-top" alt="..."> --}}
-                      <img src="{{ $dnsserver}}/storage/{{substr($publicacion[0]->img1,7) }}" class="card-img-top" alt="...">
+                      {{-- <img src="{{json_decode(@$publicacion[0]->con_image1)->{'tumb720x482'} }}" class="card-img-top" alt="..."> --}}
+                      <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[0]->img1,7) }}" class="card-img-top" alt="...">
                       
                       <div class="card-body">
-                       <a href="noticias/{{$publicacion[0]->idnoticias}}" title=""> 
+                       <a href="noticias/{{@$publicacion[0]->idnoticias}}" title=""> 
                          @php
-                          $date0 = date_create($publicacion[0]->fechapubli);
+                          $date0 = date_create(@$publicacion[0]->fechapubli);
                           $fecha0= date_format($date0, 'd-m-Y -  H:i:s');
                           @endphp
-                        <h5 class="card-title titulonot"><small class="bg-warning" style="padding-left: 5px;padding-right: 5px">{{$fecha0}}</small><br>{!!substr(utf8_encode($publicacion[0]->titulo),0) !!}</h5>
+                        <h5 class="card-title titulonot"><small class="bg-warning" style="padding-left: 5px;padding-right: 5px">{{$fecha0}}</small><br>{!!substr(utf8_encode(@$publicacion[0]->titulo),0) !!}</h5>
                       </a>
                       </div>
                     </div>
@@ -42,18 +42,18 @@ $dnsserver=$tematm["dnsserver"];
                       <div class="row">
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[1]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@@$publicacion[1]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[1]->idnoticias}}" title=""> {!!substr(utf8_encode($publicacion[1]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[1]->idnoticias}}" title=""> {!!substr(utf8_encode(@$publicacion[1]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
                         </div>
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[2]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[2]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[2]->idnoticias}}" title="">{!!substr(utf8_encode($publicacion[2]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[2]->idnoticias}}" title="">{!!substr(utf8_encode(@$publicacion[2]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -62,18 +62,18 @@ $dnsserver=$tematm["dnsserver"];
                       <div class="row">
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[3]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[3]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[3]->idnoticias}}" title="">{!!substr(utf8_encode($publicacion[3]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[3]->idnoticias}}" title="">{!!substr(utf8_encode(@$publicacion[3]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
                         </div>
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[4]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[4]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[4]->idnoticias}}" title="">{!!substr(utf8_encode($publicacion[4]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[4]->idnoticias}}" title="">{!!substr(utf8_encode(@$publicacion[4]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -87,14 +87,14 @@ $dnsserver=$tematm["dnsserver"];
                   <div class="col-md-7">
                      <div class="card card_not">                      
                      
-                      <img src="{{ $dnsserver}}/storage/{{substr($publicacion[5]->img1,7) }}" class="card-img-top" alt="...">
+                      <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[5]->img1,7) }}" class="card-img-top" alt="...">
                       <div class="card-body">
-                       <a href="noticias/{{$publicacion[5]->idnoticias}}" title=""> 
+                       <a href="noticias/{{@$publicacion[5]->idnoticias}}" title=""> 
                          @php
-                          $date5 = date_create($publicacion[5]->fechapubli);
+                          $date5 = date_create(@$publicacion[5]->fechapubli);
                           $fecha5= date_format($date5, 'd-m-Y -  H:i:s');
                           @endphp
-                        <h5 class="card-title titulonot"><small class="bg-danger" style="padding-left: 5px;padding-right: 5px">{{$fecha5}}</small><br>{!!substr(utf8_encode($publicacion[5]->titulo),0,60) !!}</h5>
+                        <h5 class="card-title titulonot"><small class="bg-danger" style="padding-left: 5px;padding-right: 5px">{{$fecha5}}</small><br>{!!substr(utf8_encode(@$publicacion[5]->titulo),0,60) !!}</h5>
                       </a>
                       </div>
                     </div>
@@ -104,18 +104,18 @@ $dnsserver=$tematm["dnsserver"];
                       <div class="row">
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[6]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[6]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[6]->idnoticias}}" title=""> {!!substr(utf8_encode($publicacion[6]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[6]->idnoticias}}" title=""> {!!substr(utf8_encode(@$publicacion[6]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
                         </div>
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[7]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[7]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[7]->idnoticias}}" title="">{!!substr(utf8_encode($publicacion[7]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[7]->idnoticias}}" title="">{!!substr(utf8_encode(@$publicacion[7]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -124,18 +124,18 @@ $dnsserver=$tematm["dnsserver"];
                       <div class="row">
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[8]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[8]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[8]->idnoticias}}" title="">{!!substr(utf8_encode($publicacion[8]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[8]->idnoticias}}" title="">{!!substr(utf8_encode(@$publicacion[8]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
                         </div>
                         <div class="col-md-6">
                            <div class="card w-100">
-                            <img src="{{ $dnsserver}}/storage/{{substr($publicacion[9]->img1,7) }}" class="card-img-top" alt="...">
+                            <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[9]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{$publicacion[9]->idnoticias}}" title="">{!!substr(utf8_encode($publicacion[9]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[9]->idnoticias}}" title="">{!!substr(utf8_encode(@$publicacion[9]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
