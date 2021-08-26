@@ -304,35 +304,33 @@ $dnsserver=$tematm["dnsserver"];
                 
                 <div class="carousel-inner">
 
-                  {{-- @foreach(array_chunk($ereferencial, 6) as $eref)
-                  <div class="content fondo3">
-                    <div class="container">
-                        <div class="row">
-                            @foreach($eref as $er)
-                            
-                            @endforeach
-                        </div>
-                      </div>
-                  </div>
-                @endforeach --}}
+                 
 
                   <div class="carousel-item active">
                     <div class="row">
                       
-                      @foreach($ereferencial as $eref)
+                      {{-- @foreach($ereferencial as $eref)
                       <div class="col-md-2"><a href="https://apps.contraloria.gob.pe/infobras/" title=""><img src="{{ $dnsserver}}/storage/{{substr($eref->img_refe,7) }}" class="img-fluid"  alt="..." height="48" ></a></div>
                         
-                      @endforeach
+                      @endforeach --}}
+                      <div class="row">
+                        <div class="col" style="border"><a href="http://www.pronied.gob.pe/" title=""><img src="img/referencial/pronied.png" class="img-fluid"  alt="..." height="48"></a></div>
+                        <div class="col"><a href="https://www.indecopi.gob.pe/mapadeconsumo" title=""><img src="img/referencial/consumo.gif" class="img-fluid" alt="..." height="48"></a></div>
+                        <div class="col"><a href="http://casillas.pj.gob.pe/redamWeb/" title=""><img src="img/referencial/redam-fc.jpg"  class="img-fluid" alt="..." height="48"></a></div>
+                        <div class="col"><a href="http://www.midis.gob.pe/sellomunicipal/" title=""><img src="img/referencial/sello-municipal2.jpg"  class="img-fluid" alt="..." height="48"></a></div>
+                        <div class="col"><a href="http://www.osce.gob.pe/" title=""><img src="img/referencial/seace-fc.jpg" class="img-fluid" alt="..." height="48"></a></div>
+                        <div class="col"><a href="http://www.mef.gob.pe/index.php?option=com_content&view=section&id=28&Itemid=100674&lang=es" title=""><img src="img/referencial/snip-fc.jpg" class="img-fluid" alt="..." height="48"></a></div>
+                      </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="row">
-                      <div class="col-md-2"><a href="http://www.pronied.gob.pe/" title=""><img src="img/referencial/pronied.png" class="img-fluid"  alt="..." height="48"></a></div>
-                      <div class="col-md-2"><a href="https://www.indecopi.gob.pe/mapadeconsumo" title=""><img src="img/referencial/consumo.gif" class="img-fluid" alt="..." height="48"></a></div>
-                      <div class="col-md-2"><a href="http://casillas.pj.gob.pe/redamWeb/" title=""><img src="img/referencial/redam-fc.jpg"  class="img-fluid" alt="..." height="48"></a></div>
-                      <div class="col-md-2"><a href="http://www.midis.gob.pe/sellomunicipal/" title=""><img src="img/referencial/sello-municipal2.jpg"  class="img-fluid" alt="..." height="48"></a></div>
-                      <div class="col-md-2"><a href="http://www.osce.gob.pe/" title=""><img src="img/referencial/seace-fc.jpg" class="img-fluid" alt="..." height="48"></a></div>
-                      <div class="col-md-2"><a href="http://www.mef.gob.pe/index.php?option=com_content&view=section&id=28&Itemid=100674&lang=es" title=""><img src="img/referencial/snip-fc.jpg" class="img-fluid" alt="..." height="48"></a></div>
+                      <div class="col"><a href="http://www.pronied.gob.pe/" title=""><img src="img/referencial/pronied.png" class="img-fluid"  alt="..." height="48"></a></div>
+                      <div class="col"><a href="https://www.indecopi.gob.pe/mapadeconsumo" title=""><img src="img/referencial/consumo.gif" class="img-fluid" alt="..." height="48"></a></div>
+                      <div class="col"><a href="http://casillas.pj.gob.pe/redamWeb/" title=""><img src="img/referencial/redam-fc.jpg"  class="img-fluid" alt="..." height="48"></a></div>
+                      <div class="col"><a href="http://www.midis.gob.pe/sellomunicipal/" title=""><img src="img/referencial/sello-municipal2.jpg"  class="img-fluid" alt="..." height="48"></a></div>
+                      <div class="col"><a href="http://www.osce.gob.pe/" title=""><img src="img/referencial/seace-fc.jpg" class="img-fluid" alt="..." height="48"></a></div>
+                      <div class="col"><a href="http://www.mef.gob.pe/index.php?option=com_content&view=section&id=28&Itemid=100674&lang=es" title=""><img src="img/referencial/snip-fc.jpg" class="img-fluid" alt="..." height="48"></a></div>
                     </div>
                   </div>  
                   

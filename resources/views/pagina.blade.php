@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0 text-dark titulonot_2"> {{ utf8_encode($datpagina[0]->nom_pagina ) }}</h1>
+        <h1 class="m-0 text-dark titulonot_2"> {{ $datpagina[0]->nom_pagina }}</h1>
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
@@ -25,7 +25,7 @@
   <div class="container">
 
         
-        {!! utf8_encode($datpagina[0]->cont_pagina) !!}
+        {!! $datpagina[0]->cont_pagina !!}
   </div>
 </div>
 
