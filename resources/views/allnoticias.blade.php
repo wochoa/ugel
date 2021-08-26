@@ -72,7 +72,7 @@ $dnsserver=$tematm["dnsserver"];
 			           ?>
 			            <img src="{{ $dnsserver}}/storage/{{substr($key->img1,7) }}" class="bd-placeholder-img card-img-top" alt="">
 			            <div class="card-body">
-			              <a href="noticias/{{$key->idnoticias}}" title=""> <p class="nav-link">{{ utf8_encode($key->titulo ) }}</p></a>
+			              <a href="noticias/{{$key->idnoticias}}" title=""> <p class="nav-link">{{ $key->titulo }}</p></a>
 			              <div class="d-flex justify-content-between align-items-center">
 			                <div class="btn-group" style="padding-left: 5px;">
 			                  <button type="button" class="btn btn-sm btn-outline-danger" onclick="abrir('noticias/{{$key->idnoticias}}');">ver más detalles</button>

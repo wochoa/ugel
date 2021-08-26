@@ -38,7 +38,7 @@ $dnsserver=$tematm["dnsserver"];
                  
                   <!-- /.card-header -->
                   <div class="card-body titulonot_2" style="padding: 25px">
-                    <h3 class="card-title" style="padding-bottom: 15px"><strong>{{utf8_encode($detallenoticia->titulo)}}</strong></h3>
+                    <h3 class="card-title" style="padding-bottom: 15px"><strong>{{$detallenoticia->titulo}}</strong></h3>
                     
                     
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -85,7 +85,7 @@ $dnsserver=$tematm["dnsserver"];
                           @endphp
                           <small class="bg-info">PUBLICADO EL DÍA: {{$fecha}}, POR LA OFICINA DE IMAGEN INSTITUCIONAL</small> 
                           <div class="dropdown-divider"></div>
-                          {!!utf8_encode($detallenoticia->contenido)!!}
+                          {!! $detallenoticia->contenido !!}
                         </div>
                   </div>
                   <!-- /.card-body -->
