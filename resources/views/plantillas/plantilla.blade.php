@@ -63,7 +63,7 @@ $dnsserver=$tematm["dnsserver"];
 
 
   </head>
-  <body class="hold-transition layout-top-nav layout-navbar-fixed">
+  <body class="hold-transition layout-top-nav layout-navbar-fixed dark-mode">
   <div class="wrapper">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color:{{ $tematm["tmcolor_tema"]}}; color:#fff;">
     	   <div class="container">

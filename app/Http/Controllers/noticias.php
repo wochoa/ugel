@@ -21,14 +21,14 @@ class noticias extends Controller
         
         $enlace = "http://".request()->server('HTTP_HOST');
         
-        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->get();
-        $direccionweb=$portalesweb[0]->iddirecciones_web;
+        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
+        $direccionweb=$portalesweb;//$portalesweb[0]->iddirecciones_web;
 
         $publicacion=DB::table('noticias')->where(['activo'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idnoticias','DESC')->limit(10)->get();
         $popup=DB::table('popup')->where(['iddirecciones_web'=>$direccionweb,'activogral'=>1])->orderByRaw('idpopup DESC')->get();
         $seccion=DB::table('secciones')->where(['activo'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idseccion','DESC')->get();
 
-        $ereferencial=DB::table('enlacerefe')->where(['activo_refe'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idenlacerefe','ASC')->get();
+        $ereferencial=DB::table('enlacerefe')->where(['activo_refe'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idenlacerefe','ASC')->get()->toArray();
 
         
         
@@ -39,9 +39,9 @@ class noticias extends Controller
     }
     public function todo()// todas las noticias para la seccion de  mas noticias
     {   $enlace=substr(request()->url(),0,-12);
-        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->get();
+        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
 
-        $direccionweb=$portalesweb[0]->iddirecciones_web;//3;// 3: direccion regional de educacion -> este dato se saco del registyro de bd de direcciones_web
+        $direccionweb=$portalesweb;//$portalesweb[0]->iddirecciones_web;//3;// 3: direccion regional de educacion -> este dato se saco del registyro de bd de direcciones_web
 
         $publicacionall=DB::table('noticias')->where(['activo'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idnoticias','DESC')->paginate(6);
 
