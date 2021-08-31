@@ -11,7 +11,7 @@ $dnsserver=$tematm["dnsserver"];
   <div class="container">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0 text-dark titulonot_2"> NOTA DE PRENSA <small> | {{ utf8_encode($tematm["nombredireccionweb"]) }} </small></h1>
+        <h1 class="m-0 text-dark titulonot_2"> NOTA DE PRENSA <small> | {{ $tematm["nombredireccionweb"] }} </small></h1>
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
