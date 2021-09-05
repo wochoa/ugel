@@ -60,8 +60,8 @@
                       <td>{{$direct->iprocedencia}}</td>
                       <td>{{$direct->motivo}}</td>
                       <td>{{$direct->fechasalida}}</td>
-                      <td>{{html_entity_decode(utf8_encode($direct->ofi_nombre))}}</td>
-                      <td>{{$direct->fun_nombres}}</td>
+                      <td>{{$direct->nom_oficina}}</td>
+                      <td>{{$direct->nom_funcionario}}</td>
                      </tr>
                      @php
                      $i++;
