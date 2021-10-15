@@ -64,7 +64,7 @@ class paginadiversa extends Controller
     }
 
     public function tema()
-    {   $dnsserver="https://gestionportales.regionhuanuco.gob.pe";
+    {   $dnsserver="http://gestionportales.regionhuanuco.gob.pe";
 
         $enlace = "http://".request()->server('HTTP_HOST');
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->get();

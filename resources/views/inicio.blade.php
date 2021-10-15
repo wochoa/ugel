@@ -33,9 +33,46 @@ $tematm = json_decode(getRemoteFile($urltema), true);
 $dnsserver=$tematm["dnsserver"];
 @endphp
 
-
+@if(count($slider)>0)
+<div class=" fondo1">
+  <div style="margin-right: auto;
+  margin-left: auto; width:100%;">
+    {{-- {{count($slider) }} --}}
+    <div id="slidercarr" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#slidercarr" data-slide-to="0" class="active"></li>
+        <li data-target="#slidercarr" data-slide-to="1"></li>
+        <li data-target="#slidercarr" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="img-fluid" src="{{ $dnsserver}}/storage/{{substr(@$slider[0]->img_slider,7) }}"  alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{{ $dnsserver}}/storage/{{substr(@$slider[0]->img_slider,7) }}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{{ $dnsserver}}/storage/{{substr(@$slider[0]->img_slider,7) }}" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#slidercarr" role="button" data-slide="prev">
+        <span class="carousel-control-custom-icon" aria-hidden="true">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#slidercarr" role="button" data-slide="next">
+        <span class="carousel-control-custom-icon" aria-hidden="true">
+          <i class="fas fa-chevron-right"></i>
+        </span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+@endif
 <!-- Content Header (Page header) noticias carouse-->
-                          <!-- fondo7 -->
+                          <!-- fondo7  slider-->
 
     <div class="content-header fondo2">
       <div class="container">
@@ -503,6 +540,10 @@ $dnsserver=$tematm["dnsserver"];
         // optional
 		$('#blogCarousel').carousel({
 				interval: 6000
+		});
+
+    $('#slidercarr').carousel({
+				interval: 4000
 		});
       </script>
       @endsection

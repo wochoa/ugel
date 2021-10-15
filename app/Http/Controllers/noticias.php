@@ -28,13 +28,15 @@ class noticias extends Controller
         $popup=DB::table('popup')->where(['iddirecciones_web'=>$direccionweb,'activogral'=>1])->orderByRaw('idpopup DESC')->get();
         $seccion=DB::table('secciones')->where(['activo'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idseccion','DESC')->get();
 
+        $slider=DB::table('slider')->where(['activo_slider'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idslider','DESC')->limit(10)->get();
+
         $ereferencial=DB::table('enlacerefe')->where(['activo_refe'=>1,'iddirecciones_web'=>$direccionweb])->orderBy('idenlacerefe','ASC')->get()->toArray();
 
         
         
 
 
-        return view('inicio',compact('publicacion','popup','seccion','ereferencial'));
+        return view('inicio',compact('publicacion','popup','seccion','ereferencial','slider'));
         // print_r($publicacion);
     }
     public function todo()// todas las noticias para la seccion de  mas noticias
