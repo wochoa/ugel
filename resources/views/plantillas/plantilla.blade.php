@@ -99,9 +99,9 @@ $dnsserver=$tematm["dnsserver"];
                                 @if($submenu[$p]["idmenus"]==$menus[$i]["idmenus"])
 
                                     @if($submenu[$p]["idpagina"]!='')
-                                    <a class="dropdown-item" href="/pagina/{{ $submenu[$p]["idpagina"]}}" target="_blank">{{ $submenu[$p]["nom_submenu"]}}</a>
+                                    <a class="dropdown-item" href="/pagina/{{ $submenu[$p]["idpagina"]}}" target="_blank">{{ utf8_decode($submenu[$p]["nom_submenu"])}}</a>
                                     @else
-                                    <a class="dropdown-item" href="{{ $submenu[$p]["link_submenu"]}}" target="_blank">{{ $submenu[$p]["nom_submenu"]}}</a>
+                                    <a class="dropdown-item" href="{{ $submenu[$p]["link_submenu"]}}" target="_blank">{{ utf8_decode($submenu[$p]["nom_submenu"])}}</a>
                                     @endif
 
                                 @endif 
@@ -224,7 +224,7 @@ $dnsserver=$tematm["dnsserver"];
       <div class="col-md-3">
         <!-- ubicacion -->
         <a class="navbar-brand mr-auto mr-lg-0" href="/"><img src="{{ $tematm["dnsserver"]}}/storage/{{substr($tematm["tmlogo_tema"],7) }}" height="50"></a>
-        {!! $tematm["tmfooter_f1"] !!} 
+        {!! utf8_decode( $tematm["tmfooter_f1"] )!!} 
       </div>
       <div class="col-md-6">
         <h4 class="titulonot_2 text-info" align="center">Ciudadanos</h4>
@@ -232,7 +232,7 @@ $dnsserver=$tematm["dnsserver"];
           <div class="col-md-6">
             <ul class="nav nav-pills flex-column ">
                <li class="nav-item nav-link ">                      
-                {!! $tematm["tmfooter_f2"] !!}                      
+                {!! utf8_decode($tematm["tmfooter_f2"]) !!}                      
               </li>
               {{-- <li class="nav-item nav-link">
                 <button type="button" class="btn btn-block btn-outline-primary col-md-8" onclick="abrir('reclamaciones');"><i class="fa fa-book fa-2x"></i><br> <h5>Libro de reclamaciones</h5></button>
@@ -242,7 +242,7 @@ $dnsserver=$tematm["dnsserver"];
           <div class="col-md-6">
              <ul class="nav nav-pills flex-column " style="font-size: 14px">
                <li class="nav-item nav-link ">                      
-                {!! $tematm["tmfooter_f3"] !!}                    
+                {!! utf8_decode($tematm["tmfooter_f3"]) !!}                    
               </li>
               {{-- <li class="nav-item nav-link">
                 <button type="button" class="btn btn-block btn-outline-info col-md-8" onclick="abrir('link_denuncias');"><i class="fa fa-book fa-2x"></i><br> <h5>denucias y quejas</h5></button>
