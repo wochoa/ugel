@@ -12,7 +12,7 @@
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item titulonot_2"><a href="/">Inicio</a></li>
-          <li class="breadcrumb-item titulonot_2 active ">{{ utf8_encode($datpagina[0]->nom_pagina )}}</li>
+          <li class="breadcrumb-item titulonot_2 active ">{{ $datpagina[0]->nom_pagina }}</li>
         </ol>
       </div><!-- /.col -->
     </div><!-- /.row -->

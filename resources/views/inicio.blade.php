@@ -275,7 +275,7 @@ $dnsserver=$tematm["dnsserver"];
               <div class="row" style="padding-top:5px;padding-bottom:10px">
                         @foreach($sec1 as $add)
                         <div class="col-xs-4 col-sm-2">
-                          <button type="button" class="btn btn-block btn-outline-{{ $add->color }}" onclick="abrir('{{ $add->enlace }}');"><i class="{{ $add->icono }} fa-2x"></i><br> <h5 >{!! utf8_encode($add->texto_enlace) !!}</h5></button>
+                          <button type="button" class="btn btn-block btn-outline-{{ $add->color }}" onclick="abrir('{{ $add->enlace }}');"><i class="{{ $add->icono }} fa-2x"></i><br> <h5 >{!! $add->texto_enlace !!}</h5></button>
                         </div>
                         @endforeach
               </div>
@@ -285,7 +285,7 @@ $dnsserver=$tematm["dnsserver"];
             @foreach(array_chunk($seccion2, 3) as $sec2)
             <div class="row">
                       @foreach($sec2 as $add2)
-                        {!! utf8_encode($add2->titulo) !!}
+                        {!! $add2->titulo !!}
                       @endforeach
             </div>
            @endforeach
@@ -302,7 +302,7 @@ $dnsserver=$tematm["dnsserver"];
                             <img src="{{ $dnsserver}}/storage/{{substr($add3->archivo_imagen,7) }}" width="200" alt="">
                           </div>
                           <div class="col p-4 d-flex flex-column position-static">
-                            {!! utf8_encode($add3->titulo) !!}
+                            {!! $add3->titulo !!}
                             <a href="https://drive.google.com/file/d/1vy3Ckvxqrx3I3ABJIGx1twMuMiZTWmeL/view?usp=sharing" class="titulonot_2 text-warning" target="_blank">{{ $add3->texto_enlace }} <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                           </div>
                           
@@ -343,7 +343,7 @@ $dnsserver=$tematm["dnsserver"];
           <div class="row">
               @foreach($sec4 as $add4)
               <div class="col-md-9"> 
-                  <h4 class="lead">{{ utf8_encode($add4->titulo) }}</h4>
+                  <h4 class="lead">{{ $add4->titulo }}</h4>
                   <h5 >{{ $add4->texto_enlace }}</h5>
               </div>
               <div class="col-md-3">
@@ -453,7 +453,8 @@ $dnsserver=$tematm["dnsserver"];
           $j=0;
           $cant=count($popup);
         @endphp
-         <div class="modal fade" id="modal-default" data-backdrop="static" >{{-- data-backdrop="static" --}}
+        @if($cant>0)
+        <div class="modal fade" id="modal-default" data-backdrop="static" >{{-- data-backdrop="static" --}}
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content ">
               
@@ -461,7 +462,7 @@ $dnsserver=$tematm["dnsserver"];
                 <a href="#" class="bg-warning" data-dismiss="modal" style="float: right;position: relative;padding-left: 8px;border-radius: 10px;width: 23px;margin-top: -20px;margin-right: -5px;font-weight: bold;">x</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
-                   {{ $cant }}
+                   {{-- {{ $cant }} --}}
                   @foreach($popup as $central)
                   @php
                     $j++;
@@ -472,7 +473,7 @@ $dnsserver=$tematm["dnsserver"];
                                 <div class="carousel-item active" data-interval="40000">
                                   <img src="{{ $dnsserver}}/storage/{{substr($central->nompopup,7) }}" class="img-fluid" alt="...">
                                   @if($central->enlace_popup<>'#')
-                                  <div align="center"><a href="{{ $central->enlace_popup }}" class="btn btn-sm btn-warning" style="padding:1px !important;"><i class="fas fa-arrow-circle-right"></i>  {{ utf8_encode($central->titulopopup) }}</a> </div>
+                                  <div align="center"><a href="{{ $central->enlace_popup }}" class="btn btn-sm btn-warning" style="padding:1px !important;"><i class="fas fa-arrow-circle-right"></i>  {{ $central->titulopopup }}</a> </div>
                                   @endif
                                 </div>
                            
@@ -483,7 +484,7 @@ $dnsserver=$tematm["dnsserver"];
                               <div class="carousel-item" data-interval="20000">                        
                                 <img src="{{ $dnsserver}}/storage/{{substr($central->nompopup,7) }}" class="img-fluid" alt="...">
                                 @if($central->enlace_popup<>'#')
-                                <div align="center"><a href="{{ $central->enlace_popup }}" class="btn btn-sm btn-warning" style="padding:1px !important;"><i class="fas fa-arrow-circle-right"></i>  {{ utf8_encode($central->titulopopup)}}</a> </div>
+                                <div align="center"><a href="{{ $central->enlace_popup }}" class="btn btn-sm btn-warning" style="padding:1px !important;"><i class="fas fa-arrow-circle-right"></i>  {{ $central->titulopopup}}</a> </div>
                                 @endif
                             </div>
                            
@@ -507,6 +508,8 @@ $dnsserver=$tematm["dnsserver"];
           </div>
           <!-- /.modal-dialog -->
         </div>
+        @endif
+        
          
         
         
