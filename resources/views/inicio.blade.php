@@ -49,10 +49,10 @@ $dnsserver=$tematm["dnsserver"];
           <img class="img-fluid" src="{{ $dnsserver}}/storage/{{substr(@$slider[0]->img_slider,7) }}"  alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="{{ $dnsserver}}/storage/{{substr(@$slider[0]->img_slider,7) }}" alt="Second slide">
+          <img class="d-block w-100" src="{{ $dnsserver}}/storage/{{substr(@$slider[1]->img_slider,7) }}" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="{{ $dnsserver}}/storage/{{substr(@$slider[0]->img_slider,7) }}" alt="Third slide">
+          <img class="d-block w-100" src="{{ $dnsserver}}/storage/{{substr(@$slider[2]->img_slider,7) }}" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#slidercarr" role="button" data-slide="prev">
