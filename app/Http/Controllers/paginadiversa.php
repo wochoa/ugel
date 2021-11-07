@@ -95,4 +95,18 @@ class paginadiversa extends Controller
         return $submenu;
 
     }
+
+    public function convocatoria()
+    {
+        //cargados el directorio regional
+        // $data=DB::connection('bdgorehco')->table('archivo_sel_cas')->join('cas_proceso_seleccion','archivo_sel_cas.id_proceso_selec','=','cas_proceso_seleccion.id_proc_sel_cas')->where('cas_proc_sel_uni_eje',1)->orderByRaw('id_proc_sel_cas DESC')->get();
+
+        $enlace = "http://".request()->server('HTTP_HOST');        
+        $iddirweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
+
+        $data=DB::table('archivo_sel_cas')->join('cas_proceso_seleccion','archivo_sel_cas.id_proceso_selec','=','cas_proceso_seleccion.id_proc_sel_cas')->where('iddireccionweb',$iddirweb)->orderByRaw('id_proc_sel_cas DESC')->get();
+
+        return view('convocatoria',compact('data'));
+        //print_r($data);
+    }
 }
