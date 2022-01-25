@@ -75,7 +75,7 @@
                                       if($convo->id_proc_sel_cas!=$datosarray[$i-1]){//aqui decimos si los procesos ya no se repiten hacemos cierre de fila y hacemos apertura de fila. y las variables debe empezar en cero
                                         $dataalmacenado[]=$convo->id_proc_sel_cas;
 
-                                        echo'<tr><td style="background:'.$color.'">'.utf8_encode($nomporceso).@$espan.'</td><td>'.utf8_encode($inscripcion).'</td><td>'.utf8_encode(@$curricular).'</td><td>'.@$entrevista.'</td><td>'.@$resufinal.'</td></tr>';
+                                        echo'<tr><td style="background:'.$color.'">'.$nomporceso.@$espan.'</td><td>'.utf8_encode($inscripcion).'</td><td>'.utf8_encode(@$curricular).'</td><td>'.@$entrevista.'</td><td>'.@$resufinal.'</td></tr>';
 
                                         // aqui ponemos las variables en cero
                                         $inscripcion="";
