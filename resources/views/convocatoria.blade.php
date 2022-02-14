@@ -84,7 +84,7 @@
                                         $resufinal="";
                                         $nomporceso="";
 
-                                        $inscripcion='<a href="'.$convo->url_archivo.'" class="btn btn-outline-primary btn-xs" style="margin-top:3px">'.$convo->nom_archivo.'</a><br>';
+                                        $inscripcion='<a href="'.$convo->url_archivo.'" class="btn btn-outline-primary btn-xs" style="margin-top:3px">'.utf8_encode($convo->nom_archivo).'</a><br>';
                                       }else // si la iteracion no cambia -> se debe almacenar en variable
                                         {
                                           $nomporceso=$convo->proc_sel_cas_descripcion;
