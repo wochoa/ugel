@@ -232,7 +232,8 @@ $dnsserver=$tematm["dnsserver"];
           <div class="col-md-6">
             <ul class="nav nav-pills flex-column ">
                <li class="nav-item nav-link ">                      
-                {!! utf8_decode($tematm["tmfooter_f2"]) !!}                      
+                {{-- {!! utf8_decode($tematm["tmfooter_f2"]) !!}                       --}}
+                {!! $tematm["tmfooter_f2"] !!}
               </li>
               {{-- <li class="nav-item nav-link">
                 <button type="button" class="btn btn-block btn-outline-primary col-md-8" onclick="abrir('reclamaciones');"><i class="fa fa-book fa-2x"></i><br> <h5>Libro de reclamaciones</h5></button>
