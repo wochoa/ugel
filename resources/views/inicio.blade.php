@@ -93,7 +93,7 @@ $dnsserver=$tematm["dnsserver"];
                           $date0 = date_create(@$publicacion[0]->fechapubli);
                           $fecha0= date_format($date0, 'd-m-Y -  H:i:s');
                           @endphp
-                        <h5 class="card-title titulonot"><small class="bg-warning" style="padding-left: 5px;padding-right: 5px">{{$fecha0}}</small><br>{!!substr(@$publicacion[0]->titulo,0) !!}</h5>
+                        <h5 class="card-title titulonot"><small class="bg-warning" style="padding-left: 5px;padding-right: 5px">{{$fecha0}}</small><br>{!!substr(@html_entity_decode($publicacion[0]->titulo),0) !!}</h5>
                       </a>
                       </div>
                     </div>
@@ -105,7 +105,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@@$publicacion[1]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[1]->idnoticias}}" title=""> {!!substr(@$publicacion[1]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[1]->idnoticias}}" title=""> {!!substr(@html_entity_decode($publicacion[1]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -114,7 +114,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[2]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[2]->idnoticias}}" title="">{!!substr(@$publicacion[2]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[2]->idnoticias}}" title="">{!!substr(@html_entity_decode($publicacion[2]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -125,7 +125,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[3]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[3]->idnoticias}}" title="">{!!substr(@$publicacion[3]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[3]->idnoticias}}" title="">{!!substr(@html_entity_decode($publicacion[3]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -134,7 +134,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[4]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[4]->idnoticias}}" title="">{!!substr(@$publicacion[4]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[4]->idnoticias}}" title="">{!!substr(@html_entity_decode($publicacion[4]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -155,7 +155,7 @@ $dnsserver=$tematm["dnsserver"];
                           $date5 = date_create(@$publicacion[5]->fechapubli);
                           $fecha5= date_format($date5, 'd-m-Y -  H:i:s');
                           @endphp
-                        <h5 class="card-title titulonot"><small class="bg-danger" style="padding-left: 5px;padding-right: 5px">{{$fecha5}}</small><br>{!!substr(@$publicacion[5]->titulo,0,60) !!}</h5>
+                        <h5 class="card-title titulonot"><small class="bg-danger" style="padding-left: 5px;padding-right: 5px">{{$fecha5}}</small><br>{!!substr(@html_entity_decode($publicacion[5]->titulo),0,60) !!}</h5>
                       </a>
                       </div>
                     </div>
@@ -167,7 +167,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[6]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[6]->idnoticias}}" title=""> {!!substr(@$publicacion[6]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[6]->idnoticias}}" title=""> {!!substr(@html_entity_decode($publicacion[6]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -176,7 +176,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[7]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[7]->idnoticias}}" title="">{!!substr(@$publicacion[7]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[7]->idnoticias}}" title="">{!!substr(@html_entity_decode($publicacion[7]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -187,7 +187,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[8]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[8]->idnoticias}}" title="">{!!substr(@$publicacion[8]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[8]->idnoticias}}" title="">{!!substr(@html_entity_decode($publicacion[8]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -196,7 +196,7 @@ $dnsserver=$tematm["dnsserver"];
                            <div class="card w-100">
                             <img src="{{ $dnsserver}}/storage/{{substr(@$publicacion[9]->img1,7) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[9]->idnoticias}}" title="">{!!substr(@$publicacion[9]->titulo,0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
+                              <p class="card-text titulonot_2"><a href="noticias/{{@$publicacion[9]->idnoticias}}" title="">{!!substr(@html_entity_decode($publicacion[9]->titulo),0,60) !!} .....  <small class="float-right bg-primary" style="padding: 0px 3px 0px 3px">Ver más</small></a></p>
                             </div>
                           </div>
                           
@@ -285,7 +285,7 @@ $dnsserver=$tematm["dnsserver"];
             @foreach(array_chunk($seccion2, 3) as $sec2)
             <div class="row">
                       @foreach($sec2 as $add2)
-                        {!! $add2->titulo !!}
+                        {!! html_entity_decode($add2->titulo) !!}
                       @endforeach
             </div>
            @endforeach
